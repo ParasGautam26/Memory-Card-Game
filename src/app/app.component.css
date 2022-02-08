@@ -1,17 +1,3 @@
-h1 {
-    color: rgba(0, 242, 255, 0.3);
-}
-
-.card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    background: #1a1e23;
-    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
-}
-
 .bubbles {
     position: relative;
     width: 100%;

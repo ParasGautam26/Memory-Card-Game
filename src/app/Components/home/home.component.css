@@ -1,0 +1,44 @@
+h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    text-align: center;
+}
+
+#playButton {
+    margin-top: 10%;
+    background-color: rgba(136, 246, 251, 0.3);
+    font-size: x-large;
+    width: 150px;
+    height: 150px;
+    outline-style: initial;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#playButton:hover {
+    background-color: rgb(91, 173, 146);
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+}
+
+.fas fa-play {
+    background-color: white;
+}
+
+.card-footer {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1e23;
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+}
