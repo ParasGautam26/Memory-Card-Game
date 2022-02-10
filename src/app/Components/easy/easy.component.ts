@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EasyComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+   
   }
 
+  ngOnInit(): void {
+    
+  }
+
+  onStart(){
+   
+
+  }
 }
+
