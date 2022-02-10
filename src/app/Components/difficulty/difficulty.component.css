@@ -3,6 +3,11 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.card-body {
+    height: 100%;
+    width: 100%;
+}
+
 .container {
     text-align: center;
 }
