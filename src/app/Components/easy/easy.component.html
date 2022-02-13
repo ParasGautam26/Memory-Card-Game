@@ -14,15 +14,15 @@
 
             <p id="flips">Flips :</p>&nbsp;
 
-            <span id="flip">0</span>
+            <span id="flip">{{flipss}}</span>
 
             <p id="errorScore">Error score :</p>
 
-            <span id="error">0</span>
+            <span id="error">{{errorr}}</span>
 
         </div>
     </div>
-    <button id="playButton" type="button" class="btn btn-primary" value="playButton" (click)="onStart">
+    <button id="playButton" type="button" class="btn btn-primary" value="playButton" (click)="onStart()">
         Start
     </button>
 </div>
