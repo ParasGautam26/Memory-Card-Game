@@ -25,7 +25,7 @@ export class EasyComponent implements OnInit {
 
   increment() {
     var i=0;
-    i++; // Change to i += [yourvalue] for any increase other than 1
+    i++; 
     
   }
 
