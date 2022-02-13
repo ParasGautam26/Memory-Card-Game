@@ -7,17 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EasyComponent implements OnInit {
 
+
+  errorr = 0;
+  flipss = 0;
+
   constructor() {
-   
+
   }
 
   ngOnInit(): void {
+
+  }
+  
+  onStart() {
+    setInterval('increment()', 2000);
+  }
+
+  increment() {
+    var i=0;
+    i++; 
     
   }
 
-  onStart(){
-   
-
-  }
 }
-
