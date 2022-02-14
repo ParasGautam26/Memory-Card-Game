@@ -1,17 +1,12 @@
-.card {
-    position: fixed;
-    width: 47%;
-    top: 10%;
-    left: 50%;
-    /* height: 10%; */
-    transform: translate(-50%, -50%);
-    background: #1a1e23;
-    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
-    text-align: center;
-}
-
-
-/* p {
+    #card {
+        position: fixed;
+        width: fit-content;
+        height: 100%;
+        background: #1a1e23;
+        box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+        text-align: center;
+    }
+    /* p {
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -19,90 +14,99 @@
     font-weight: bold;
     font-size: larger;
 } */
-
-span {
-    vertical-align: middle;
-    float: left;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-}
-
-p {
-    vertical-align: middle;
-    float: left;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-}
-
-#time {
-    vertical-align: middle;
-    float: left;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-}
-
-#flips {
-    vertical-align: middle;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-    text-align: center;
-    padding-left: 5%;
-}
-
-#flip {
-    vertical-align: middle;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-    text-align: center;
-    padding-left: 5%;
-}
-
-#error {
-    vertical-align: middle;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-    padding-left: 5%;
-}
-
-#errorScore {
-    vertical-align: middle;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
-    padding-left: 5%;
-}
-
-#playButton {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-    margin-top: 12%;
-    background-color: rgba(136, 246, 251, 0.3);
-    width: 100px;
-    height: 100px;
-    outline-style: initial;
-    border-radius: 100px;
-    cursor: pointer;
-    transition-duration: 0.2s;
-}
-
-.container {
-    text-align: center;
-}
-
-#playButton:hover {
-    background-color: rgb(91, 173, 146);
-    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
-}
+    
+    #minutes {
+        font-size: xx-large;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+    
+    p {
+        margin-top: 30%;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+    }
+    
+    #time {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+    }
+    
+    #flips {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+        text-align: center;
+        padding-left: 5%;
+    }
+    
+    #flip {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+        text-align: center;
+        padding-left: 5%;
+        font-size: xx-large;
+    }
+    
+    #error {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+        padding-left: 5%;
+        font-size: xx-large;
+    }
+    
+    #errorScore {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: larger;
+        padding-left: 5%;
+    }
+    
+    #playButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        background-color: rgba(136, 246, 251, 0.3);
+        width: 100px;
+        height: 100px;
+        outline-style: initial;
+        border-radius: 100px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        margin-bottom: 50%;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    #playButton:hover {
+        background-color: rgb(91, 173, 146);
+        box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+    }
+    
+    #c {
+        background-color: #1a1e23;
+        box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+        height: 175px;
+        width: 125px;
+    }
+    
+    .game-container {
+        position: fixed;
+        top: 10%;
+        left: 18%;
+        display: grid;
+        grid-template-columns: repeat(8, auto);
+        grid-gap: 3%;
+    }

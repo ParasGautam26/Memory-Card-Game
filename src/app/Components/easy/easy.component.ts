@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EasyComponent implements OnInit {
 
-
+  isButtonVisible = true;
   errorr = 0;
   flipss = 0;
 
@@ -20,13 +20,8 @@ export class EasyComponent implements OnInit {
   }
   
   onStart() {
-    setInterval('increment()', 2000);
+    this.isButtonVisible = false;
+   
   }
-
-  increment() {
-    var i=0;
-    i++; 
-    
-  }
-
+  
 }
