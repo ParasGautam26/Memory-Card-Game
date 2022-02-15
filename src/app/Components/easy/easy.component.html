@@ -1,9 +1,9 @@
-<div class="card" id="card">
+<div class="cards" id="card">
     <div class="card-body">
         <p id="time">Time Elapsed :</p>
         <span id="minutes">
-                100
-            </span>
+            100
+        </span>
         <!-- <p>:</p><span id="seconds">
                 00
             </span>
@@ -12,21 +12,21 @@
             </span> -->
 
         <p id="flips">Flips :</p>
-        <span id="flip">{{flipss}}</span>
+        <span id="flip">0</span>
 
         <p id="errorScore">Error score :</p>
 
-        <span id="error">{{errorr}}</span>
+        <span id="error">0</span>
 
 
     </div>
     <div class="container">
-        <button id="playButton" type="button" class="btn btn-primary" *ngIf="this.isButtonVisible" value="playButton" (click)="onStart()">
+        <button id="playButton" type="button" class="btn btn-primary" value="playButton" (click)="onStart()">
         Start
     </button>
     </div>
 </div>
-<div class="overlay-text ">
+<div class="overlay-text visible">
     Click to Start
 </div>
 
