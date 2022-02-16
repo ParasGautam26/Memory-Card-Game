@@ -15,11 +15,33 @@
     font-size: larger;
 } */
     
-    #minutes {
+    #seconds {
         font-size: xx-large;
         color: white;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
+    }
+    
+    table {
+        display: inline-table;
+        width: fit-content;
+        height: fit-content;
+        position: fixed;
+        top: 35%;
+    }
+    
+    tr {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: x-large;
+    }
+    
+    td {
+        border: none;
+    }
+    
+    th {
+        border: none;
     }
     
     p {
@@ -77,13 +99,16 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: large;
         background-color: rgba(136, 246, 251, 0.3);
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         outline-style: initial;
         border-radius: 100px;
         cursor: pointer;
         transition-duration: 0.2s;
         margin-bottom: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     
     .container {
@@ -174,8 +199,34 @@
         cursor: pointer;
     }
     
+    #restartButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: small;
+        background-color: rgba(136, 246, 251, 0.3);
+        width: 100px;
+        height: 100px;
+        outline-style: initial;
+        border-radius: 100px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 70%;
+        left: 47%;
+    }
+    
+    #restartButton:hover {
+        background-color: rgb(91, 173, 146);
+        box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+        cursor: pointer;
+    }
+    
     .overlay-text {
         display: none;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #start-text {
         position: fixed;
         top: 0;
         left: 0;
@@ -184,8 +235,27 @@
         justify-content: center;
         align-items: center;
         z-index: 100;
-        color: white;
-        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #game-over-text {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #victory-text {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        justify-content: center;
     }
     
     .overlay-text.visible {

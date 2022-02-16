@@ -1,7 +1,7 @@
 <div class="cards" id="card">
     <div class="card-body">
         <p id="time">Time Elapsed :</p>
-        <span id="minutes">
+        <span id="seconds">
             100
         </span>
         <!-- <p>:</p><span id="seconds">
@@ -21,21 +21,45 @@
 
     </div>
     <div class="container">
-        <button id="playButton" type="button" class="btn btn-primary" value="playButton" (click)="onStart()">
-        Start
+        <button id="playButton" type="button" class="btn btn-primary" value="playButton" routerLink="/difficulty">
+        Change Difficulty
     </button>
     </div>
 </div>
-<div class="overlay-text visible">
+<div id="start-text" class="overlay-text visible">
     Click to Start
 </div>
 
-<div id="game-over-text" class="overlay-text ">
+<div id="game-over-text" class="overlay-text " routerLink="/difficulty">
     GAME OVER
+    <button id="restartButton" type="button" class="btn btn-primary" value="playButton" routerLink="/difficulty">
+        RESTART
+    </button>
 </div>
 
-<div id="victory-text" class="overlay-text ">
+
+
+<div id="victory-text" class="overlay-text " routerLink="/difficulty">
     VICTORY
+    <button id="restartButton" type="button" class="btn btn-primary" value="playButton" routerLink="/easy">
+        RESTART
+    </button>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row"> Time Taken</th>
+                <td><span id="game-over-time">0</span></td>
+            </tr>
+            <tr>
+                <th scope="row"> Flips</th>
+                <td><span id="game-over-flip">0</span></td>
+            </tr>
+            <tr>
+                <th scope="row"> Error Score</th>
+                <td><span id="game-over-error">0</span></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="game-container">
