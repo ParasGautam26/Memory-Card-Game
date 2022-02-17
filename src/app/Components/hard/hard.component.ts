@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import {ResolveStart, Router} from '@angular/router'
 
 @Component({
-  selector: 'app-medium',
-  templateUrl: './medium.component.html',
-  styleUrls: ['./medium.component.css']
+  selector: 'app-hard',
+  templateUrl: './hard.component.html',
+  styleUrls: ['./hard.component.css']
 })
-export class MediumComponent implements OnInit {
+export class HardComponent implements OnInit {
 
-  x:any;
-
-  constructor() { }
+  
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MatchOrNot(120, cards);
+    let game = new MatchOrNot(60, cards);
     let diffButton = document.getElementById('playButton');
 
-    diffButton?.addEventListener('click', () => {
+    diffButton?.addEventListener('click',()=>{
       game.restart();
     });
-    
 
     overlays.forEach(overlay =>{
       overlay.addEventListener('click',()=>{
@@ -35,12 +34,6 @@ export class MediumComponent implements OnInit {
       });
   });
 }
-
-restart(){
-  this.x  = document.getElementById('seconds');
-  this.x.innerText = 120;
-}
-
 }
 
 class AudioController{
@@ -91,6 +84,7 @@ gameOverFlip: any;
 gameOverError: any;
 
 
+
 constructor(totalTime: any,cards: any){
   this.cardsArray = cards;
   this.totalTime = totalTime;
@@ -103,14 +97,9 @@ constructor(totalTime: any,cards: any){
   this.gameOverFlip = document.getElementById('game-over-flip');
   this.gameOverError = document.getElementById('game-over-error');
   this.error =0;
+  
 }
-restart(){
-  clearInterval(this.countDown);
-  this.gameOverTime.innerText = 0;
-  this.gameOverFlip.innerText = this.totalClicks;
-  this.gameOverError.innerText = this.error;
-  this.hideCards();
-}
+
 startGame(){
   this.cardToCheck = null;
   this.totalClicks = 0;
@@ -129,6 +118,14 @@ startGame(){
   this.timer.innerText = this.timeRemaining;
   this.ticker.innerText = this.totalClicks;
   this.errorValue.innerText = this.error;
+}
+
+restart(){
+    clearInterval(this.countDown);
+    this.gameOverTime.innerText = 0;
+    this.gameOverFlip.innerText = this.totalClicks;
+    this.gameOverError.innerText = this.error;
+    this.hideCards();
 }
 
 hideCards(){
@@ -171,7 +168,7 @@ cardMatch(card1:Element,card2:Element){
   card2.classList.add('matched');
   this.audioController.match();
   if(this.matchedCards.length===this.cardsArray.length){
-    this.gameOverTime.innerText = 120-this.timeRemaining;
+    this.gameOverTime.innerText = 60-this.timeRemaining;
     this.gameOverFlip.innerText = this.totalClicks;
     this.gameOverError.innerText = this.error;
     this.victory();
@@ -212,6 +209,9 @@ gameOver(){
   document.getElementById('game-over-text')?.classList.add('visible');
   this.hideCards();
 }
+
+
+  
 
 victory(){
   clearInterval(this.countDown);

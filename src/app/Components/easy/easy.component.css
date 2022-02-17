@@ -224,6 +224,7 @@
         display: none;
         color: white;
         font-family: 'Times New Roman', Times, serif;
+        cursor: pointer;
     }
     
     #start-text {

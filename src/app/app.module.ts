@@ -7,6 +7,7 @@ import { DifficultyComponent } from './Components/difficulty/difficulty.componen
 import { HomeComponent } from './Components/home/home.component';
 import { EasyComponent } from './Components/easy/easy.component';
 import { MediumComponent } from './Components/medium/medium.component';
+import { HardComponent } from './Components/hard/hard.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MediumComponent } from './Components/medium/medium.component';
     DifficultyComponent,
     HomeComponent,
     EasyComponent,
-    MediumComponent
+    MediumComponent,
+    HardComponent
   ],
   imports: [
     BrowserModule,
