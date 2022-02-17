@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DifficultyComponent } from './Components/difficulty/difficulty.component';
 import { HomeComponent } from './Components/home/home.component';
 import { EasyComponent } from './Components/easy/easy.component';
+import { MediumComponent } from './Components/medium/medium.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DifficultyComponent,
     HomeComponent,
-    EasyComponent
+    EasyComponent,
+    MediumComponent
   ],
   imports: [
     BrowserModule,

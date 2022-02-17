@@ -1,0 +1,309 @@
+#card {
+    position: fixed;
+    width: fit-content;
+    height: 100%;
+    background: #1a1e23;
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+    text-align: center;
+}
+
+
+/* p {
+display: inline-block;
+vertical-align: middle;
+color: white;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+font-size: larger;
+} */
+
+#seconds {
+    font-size: xx-large;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+table {
+    display: inline-table;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 35%;
+}
+
+tr {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+td {
+    border: none;
+}
+
+th {
+    border: none;
+}
+
+p {
+    margin-top: 30%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#time {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#flips {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding-left: 5%;
+}
+
+#flip {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding-left: 5%;
+    font-size: xx-large;
+}
+
+#error {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 5%;
+    font-size: xx-large;
+}
+
+#errorScore {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 5%;
+}
+
+#playButton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: rgba(136, 246, 251, 0.3);
+    width: 130px;
+    height: 130px;
+    outline-style: initial;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    margin-bottom: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#playButton:hover {
+    background-color: rgb(91, 173, 146);
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+    cursor: pointer;
+}
+
+#c {
+    position: relative;
+    background-color: #1a1e23;
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+    height: 175px;
+    width: 125px;
+    transition: all .2s ease-in-out;
+}
+
+.card-value {
+    height: 100px;
+    width: 100px;
+    transition: all .2s ease-in-out;
+}
+
+#c:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.game-container {
+    position: fixed;
+    top: 10%;
+    left: 18%;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 3%;
+    perspective: 500px;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background-color: rgb(219, 199, 170);
+    border-radius: 5%;
+}
+
+.card-back:hover {
+    background-color: rgb(91, 173, 146);
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.card-back:hover .question {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.card-front:hover .card-value {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+    cursor: pointer;
+}
+
+#restartButton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    background-color: rgba(136, 246, 251, 0.3);
+    width: 100px;
+    height: 100px;
+    outline-style: initial;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    position: fixed;
+    top: 70%;
+    left: 47%;
+}
+
+#restartButton:hover {
+    background-color: rgb(91, 173, 146);
+    box-shadow: 0 4px 8px 0 rgba(136, 246, 251, 0.3), 0 6px 20px 0 rgba(136, 246, 251, 0.3);
+    cursor: pointer;
+}
+
+.overlay-text {
+    display: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#start-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#game-over-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+#victory-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    justify-content: center;
+}
+
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.938);
+        font-size: 10em;
+    }
+}
+
+@keyframes dance {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(-30deg)
+    }
+    75% {
+        transform: rotate(30deg)
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(-10deg)
+    }
+    75% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto)
+    }
+}

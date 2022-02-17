@@ -16,7 +16,7 @@ export class EasyComponent implements OnInit {
   ngOnInit(): void {
       let overlays = Array.from(document.getElementsByClassName('overlay-text'));
       let cards = Array.from(document.getElementsByClassName('card'));
-      let game = new MatchOrNot(5, cards);
+      let game = new MatchOrNot(180, cards);
       
 
       overlays.forEach(overlay =>{
@@ -155,7 +155,7 @@ class MatchOrNot{
     card2.classList.add('matched');
     this.audioController.match();
     if(this.matchedCards.length===this.cardsArray.length){
-      this.gameOverTime.innerText = 1000-this.timeRemaining;
+      this.gameOverTime.innerText = 180-this.timeRemaining;
       this.gameOverFlip.innerText = this.totalClicks;
       this.gameOverError.innerText = this.error;
       this.victory();
