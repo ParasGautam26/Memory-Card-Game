@@ -40,14 +40,20 @@
                     "configurations": {
                         "production": {
                             "budgets": [{
+                                    "type": "bundle",
+                                    "name": "main",
+                                    "maximumWarning": "170kb",
+                                    "maximumError": "250kb"
+                                },
+                                {
                                     "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
+                                    "maximumWarning": "170kb",
+                                    "maximumError": "250kb"
                                 }
                             ],
                             "fileReplacements": [{
